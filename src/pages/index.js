@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <Link to={`/works/${work.slug}`} className="card__image">
-              <Img fluid={work.coverImage.fixed} />
+              <Img fixed={work.coverImage.fixed} />
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
