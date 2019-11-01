@@ -26,7 +26,7 @@ export default ({ data }) => (
           }}
         />
         <div className="sheet__gallery">
-          <Img fixed={data.datoCmsWork.coverImage.fixed} />
+          <Img fluid={data.datoCmsWork.coverImage.fluid} />
         </div>
       </div>
     </article>
@@ -53,8 +53,8 @@ export const query = graphql`
       }
       coverImage {
         url
-        fixed(width: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsFixed
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsFluid
         }
       }
     }
