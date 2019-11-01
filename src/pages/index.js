@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <Link to={`/works/${work.slug}`} className="card__image">
-              <Img fluid={work.coverImage.fluid} />
+              <Img fluid={work.coverImage.fixed} />
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
@@ -40,7 +40,7 @@ export const query = graphql`
           slug
           excerpt
           coverImage {
-            fluid(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
+            fixed(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsFixed
             }
           }
