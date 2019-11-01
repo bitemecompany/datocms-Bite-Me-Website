@@ -40,7 +40,7 @@ export const query = graphql`
           slug
           excerpt
           coverImage {
-            fixed(maxWidth: 450, imgixParams: { fm: "jpg", auto: "compress" }) {
+            fixed(width: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
               ...GatsbyDatoCmsFixed
             }
           }
