@@ -53,7 +53,7 @@ export const query = graphql`
       }
       coverImage {
         url
-        sizes(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
